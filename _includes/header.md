@@ -5,19 +5,19 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-        <a href="/index.html">张志敏的技术专栏</a>
+        <a href="/index.html">Sandman</a>
       </h1>
       <div class="navbar-nav flex-row order-md-last">
         <div class="nav-item d-none d-md-flex me-3">
           <div class="btn-list">
-            <a href="https://github.com/beginor" class="btn" target="_blank" rel="noreferrer">
+            <a href="https://" class="btn" target="_blank" rel="noreferrer">
               <i class="icon ti ti-brand-github"></i>
               GitHub
-            </a>
-            <a href="http://paypal.me/beginor" class="btn" target="_blank" rel="noreferrer">
-              <i class="icon ti ti-brand-paypal text-red"></i>
-              PayPal.Me
-            </a>
+            #</a>
+            # <a href="http://paypal.me/beginor" class="btn" target="_blank" rel="noreferrer">
+            #  <i class="icon ti ti-brand-paypal text-red"></i>
+            #  PayPal.Me
+            #</a>
           </div>
         </div>
         <div class="d-none d-md-flex">
