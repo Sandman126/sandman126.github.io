@@ -13,11 +13,11 @@
             <a href="https://" class="btn" target="_blank" rel="noreferrer">
               <i class="icon ti ti-brand-github"></i>
               GitHub
-            [//]: #</a>
+            </a>
              <a href="http://paypal.me/beginor" class="btn" target="_blank" rel="noreferrer">
               <i class="icon ti ti-brand-paypal text-red"></i>
               PayPal.Me
-            </a>[//]: #
+            </a>
           </div>
         </div>
         <div class="d-none d-md-flex">
