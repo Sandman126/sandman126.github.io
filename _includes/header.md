@@ -30,7 +30,7 @@
         </div>
         <div class="nav-item ms-3">
           <a href="#" class="nav-link d-flex lh-1 text-reset p-0">
-            <span class="avatar avatar-sm" style="background-image: url(https://avatars.githubusercontent.com/u/159065?v=4?v=3&s=88)"></span>
+            <span class="avatar avatar-sm" style="background-image: url(https://avatars.githubusercontent.com/u/67511687?s=96&v=4)"></span>
             <div class="d-none d-xl-block ps-2">
               <div>sandman</div>
               <div class="mt-1 small text-muted">sandman</div>
