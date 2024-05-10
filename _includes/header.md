@@ -60,7 +60,7 @@
                <i class="icon ti ti-rss me-1"></i> 订阅
               </a>
             </li>
-            <li class="nav-item {% if page.navbar_active == 'libraries' %}active{% endif %}">
+            <!-- <li class="nav-item {% if page.navbar_active == 'libraries' %}active{% endif %}">
               <a class="nav-link" href="/libraries.html">
                 <i class="icon ti ti-brand-github me-1"></i> 开源项目
               </a>
@@ -69,7 +69,7 @@
               <a class="nav-link" href="/about.html">
                 <i class="icon ti ti-info-square me-1"></i> 关于
               </a>
-            </li>
+            </li> -->
           </ul>
           <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
             <form role="search" method="get" target="_blank" action="https://www.google.com/search">
