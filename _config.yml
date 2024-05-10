@@ -1,13 +1,13 @@
-﻿title: "张志敏的技术专栏"
-subtitle: "我是一个靠谱的程序员, 目前关注 MonoTouch、 Mono for Android、 Silverlight、  ASP.NET MVC 以及 NHibernate。"
-public_url: "https://beginor.github.io"
-keywords: "mono, ios, android, silverlight, asp.net mvc, asp.net web api, nhibernate, c, sql server, xml, linux, mac osx"
+﻿title: "Sandman"
+subtitle: "Sandman"
+public_url: "https://sandman126.github.io"
+keywords: "Sandman"
 owner:
-  name: "张志敏"
-  mail: "beginor(at)qq.com"
-  weibo: "https://weibo.com/beginor"
+  name: "Sandman"
+  mail: "999999(at)qq.com"
+  weibo: "https://weibo.com/99999"
 disqus:
-  short_name: "beginor-github"
+  short_name: "Sandman"
 paginate: 12
 exclude: ["start-jekyll.sh", "start-jekyll.bat", "bower.json"]
 encoding: utf-8
