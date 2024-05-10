@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-cn">
+<head>
+  <title>{{ site.title }}</title>
+  {% include tabler.md %}
+  {% include common-meta.md %}
+  <meta name="keywords" content="{{ site.keywords }}" >
+  <meta name="description" content="{{ site.description }}" >
+  {% include gtag.md %}
+</head>
+<body class="layout-boxed">
+<script src="/assets/@tabler/core/js/demo-theme.js"></script>
+<div class="page">
+{% include header.md %}
+<div class="page-wrapper">
+  <div class="page-body">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-md-9">
+          {{ content }}
+        </div>
+        <!-- side bar -->
+        <div class="col-md-3 hidden-print">
+          {% include tags.md %}
+          {% include recent-post.md %}
+          {% include flag-counter.md %}
+        </div>
+        <!-- /side bar -->
+      </div>
+    </div>
+  </div>
+  {% include footer.md %}
+</div>
+</div>
+</body>
+</html>
