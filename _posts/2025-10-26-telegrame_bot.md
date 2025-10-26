@@ -1,4 +1,9 @@
-# Telegram 服务通知机器人创建指南
+---
+title: Telegram 服务通知机器人创建指南
+date: 2025-10-26 22:23
+category: Net_work
+tags: [telegram][bot]
+---
 
 ---
 
