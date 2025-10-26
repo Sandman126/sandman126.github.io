@@ -1,0 +1,148 @@
+# Telegram 服务通知机器人创建指南
+
+---
+
+- Telegram 服务通知机器人创建指南 | Shared Grok Conversation
+- [https://grok.com/share/c2hhcmQtNA==_1f357034-77ed-42a7-b697-50e83e688228](https://grok.com/share/c2hhcmQtNA%3D%3D_1f357034-77ed-42a7-b697-50e83e688228)
+- Telegram 建立自己的服务通知机器人
+- 2025-09-26 00:46
+
+---
+
+Telegram 建立自己的服务通知机器人
+
+### 如何在 Telegram 上建立自己的服务通知机器人
+
+Telegram Bot API 是一个强大的工具，可以让你轻松创建机器人，用于发送服务通知（如服务器警报、表单提交提醒或网站变化通知）。整个过程免费且简单，只需几分钟即可完成。下面我将一步步指导你从创建机器人到发送通知的完整流程。假设你有基本的编程知识（如 Python），如果没有，我会提供简单示例。
+
+#### 步骤 1: 创建 Telegram Bot
+
+1. ​**打开 Telegram App**：在手机或桌面版 Telegram 中搜索 @BotFather（这是 Telegram 官方的“机器人之父”）。
+2. ​**启动对话**：点击“Start”按钮，然后发送命令 /newbot。
+3. ​**设置机器人信息**：
+
+    - 输入机器人名称（例如：“我的服务通知 Bot”）。
+    - 输入唯一用户名（必须以 “bot” 结尾，例如：my\_service\_notify\_bot）。用户名必须全局唯一，如果已被占用，尝试添加数字。
+4. ​**获取 API Token**​：BotFather 会回复一个类似 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11 的 token。​**立即保存这个 token**，它用于 API 调用。不要分享给他人！  
+    示例对话截图（基于官方文档）：  
+    text
+
+    ```
+    /newbot
+    BotFather: Alright, a new bot. How are we going to call it? Please choose a name for your bot.
+    你: My Service Notify Bot
+    BotFather: Good. Now let's choose a username for your bot. It must end in `bot`. Like this, for example: TetrisBot or tetris_bot.
+    你: my_service_notify_bot
+    BotFather: Done! Congratulations on your new bot. You will find it at t.me/my_service_notify_bot. Use this token to access the HTTP API: 123456:ABC-...
+    ```
+
+#### 步骤 2: 获取 Chat ID（聊天 ID，用于发送通知到特定用户或群组）
+
+机器人只能发送消息到已知 Chat ID 的聊天中。
+
+1. ​**与机器人聊天**​：在 Telegram 中搜索你的机器人用户名（如 @my\_service\_notify\_bot），点击“Start”启动对话。
+2. ​**获取 Chat ID**：
+
+    - 发送任意消息给机器人。
+    - 然后，在浏览器中访问：https://api.telegram.org/bot\<YOUR\_TOKEN\>/getUpdates（替换 \<YOUR\_TOKEN\> 为你的 token）。
+    - 在返回的 JSON 中，查找 "chat":{"id":123456789}，这个 id 就是你的 Chat ID（正数表示个人聊天，负数表示群组）。
+
+    示例 JSON 片段：  
+    json
+
+    ```
+    {
+      "ok": true,
+      "result": [
+        {
+          "update_id": 123,
+          "message": {
+            "message_id": 1,
+            "chat": {
+              "id": 123456789,  // 这就是 Chat ID
+              "type": "private"
+            },
+            "date": 1695700000,
+            "text": "Hello"
+          }
+        }
+      ]
+    }
+    ```
+
+    ​**提示**：如果要发送到群组，先将机器人添加到群组（在群设置中添加成员），然后用群组 Chat ID（负数，如 -1001234567890）。
+
+#### 步骤 3: 发送通知消息
+
+使用 Telegram Bot API 的 sendMessage 方法发送文本通知。API 端点：https://api.telegram.org/bot\<TOKEN\>/sendMessage。
+
+- ​**参数**：
+
+  - chat\_id：从步骤 2 获取。
+  - text：通知内容。
+  - 可选：parse\_mode\=Markdown（支持格式化文本）。
+
+**简单示例：使用 curl（命令行工具）测试发送**
+
+bash
+
+```
+curl -X POST "https://api.telegram.org/bot<YOUR_TOKEN>/sendMessage" \
+     -d chat_id=123456789 \
+     -d text="服务警报：服务器 CPU 使用率超过 80%！"
+```
+
+替换 \<YOUR\_TOKEN\> 和 chat\_id，运行后，你会收到通知。
+
+#### 步骤 4: 集成到你的服务中（编程示例）
+
+为了自动化通知，你需要从你的服务（如服务器脚本、Google Apps Script 或 Web 应用）调用 API。下面是一个 Python 示例，使用 requests 库发送通知。安装：pip install requests。
+
+python
+
+```
+import requests
+
+# 你的配置
+TOKEN = '123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11'  # 从 BotFather 获取
+CHAT_ID = 123456789  # 从 getUpdates 获取
+
+def send_notification(message):
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    payload = {
+        'chat_id': CHAT_ID,
+        'text': message,
+        'parse_mode': 'Markdown'  # 可选：支持粗体 *text* 等
+    }
+    response = requests.post(url, data=payload)
+    if response.status_code == 200:
+        print("通知发送成功！")
+    else:
+        print(f"错误: {response.text}")
+
+# 使用示例：触发服务通知
+if __name__ == "__main__":
+    send_notification("🚨 服务通知：新用户注册成功！\n时间：2025-09-26 10:00\n详情：用户 ID 789")
+```
+
+- ​**运行**：保存为 notify.py，执行 python notify.py。
+- ​**高级用法**：
+
+  - 发送图片：用 sendPhoto，上传文件 URL 或本地文件。
+  - 定时通知：结合 cron 作业或 scheduler 库。
+  - Webhook 模式：如果你的服务需要接收更新（如用户交互），设置 webhook：https://api.telegram.org/bot\<TOKEN\>/setWebhook?url\=https://your-server.com/webhook。
+
+#### 常见问题与提示
+
+- ​**隐私与安全**​：Token 相当于密码，存储在环境变量中（如 os.getenv('TELEGRAM\_TOKEN')）。不要硬编码。
+- ​**限制**：免费 Bot 每天发送限额（约 30 条/分钟），群组 20 条/分钟。超限会临时禁用。
+- ​**扩展**：
+
+  - 集成 Google Apps Script：适合 Google Sheets/Forms 通知（详见 ）。
+  - 服务器监控：如 ThingsBoard 或自定义脚本监控 CPU/磁盘（详见 , ）。
+  - 网站变化检测：用 Python Scrapy + 这个 Bot 发送警报（详见 ）。
+- ​**官方文档**​：更多 API 方法见 [Telegram Bot API](https://core.telegram.org/bots/api)。入门指南：[Bots 介绍](https://core.telegram.org/bots)。
+
+如果你的服务是特定平台（如 WordPress 或 AWS），提供更多细节，我可以给出针对性示例！
+
+‍
