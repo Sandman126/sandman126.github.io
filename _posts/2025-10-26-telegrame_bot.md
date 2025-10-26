@@ -5,13 +5,6 @@ category: Net_work
 tags: [telegram][bot]
 ---
 
----
-
-- Telegram 服务通知机器人创建指南 | Shared Grok Conversation
-- Telegram 建立自己的服务通知机器人
-- 2025-09-26 00:46
-
----
 
 Telegram 建立自己的服务通知机器人
 
