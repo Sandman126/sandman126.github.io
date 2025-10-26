@@ -126,8 +126,9 @@ comments:
     mapping: "pathname"
     strict: "0"
     input_position: "bottom"
-    lang: "zh-CN"
+    lang: "en"
     reactions_enabled: "1"
+    theme: "noborder_dark"
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
