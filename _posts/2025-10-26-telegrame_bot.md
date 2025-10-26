@@ -8,7 +8,6 @@ tags: [telegram][bot]
 ---
 
 - Telegram 服务通知机器人创建指南 | Shared Grok Conversation
-- [https://grok.com/share/c2hhcmQtNA==_1f357034-77ed-42a7-b697-50e83e688228](https://grok.com/share/c2hhcmQtNA%3D%3D_1f357034-77ed-42a7-b697-50e83e688228)
 - Telegram 建立自己的服务通知机器人
 - 2025-09-26 00:46
 
