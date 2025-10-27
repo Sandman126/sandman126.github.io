@@ -5,6 +5,8 @@ author: cotes
 categories: [network, blog]
 tags: [blog,writing]
 render_with_liquid: false
+img:
+  path: /assets/devices-mockup.png
 ---
 
 
