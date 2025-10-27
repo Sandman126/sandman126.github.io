@@ -4,8 +4,10 @@ description: This tutorial will guide you how to write a post in the _Chirpy_ te
 author: cotes
 categories: [network, blog]
 tags: [blog,writing]
+render_with_liquid: false
 image:
   path: /assets/devices-mockup.png
+  
 ---
 
 
