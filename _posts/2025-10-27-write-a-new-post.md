@@ -7,7 +7,6 @@ tags: [blog,writing]
 render_with_liquid: false
 image:
   path: /assets/devices-mockup.png
-  
 ---
 
 
