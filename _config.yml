@@ -126,7 +126,7 @@ comments:
     mapping: "pathname"
     strict: "0"
     input_position: "bottom"
-    lang: "en"
+    lang: "zh-CN"
     reactions_enabled: "1"
     # theme: "noborder_dark"
 
