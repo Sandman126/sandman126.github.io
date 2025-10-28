@@ -120,9 +120,9 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: "sandman126/sandman126.github.io"
-    repo_id: "R_kgDOQJZswA"
+    repo_id: "R_kgDOQK8AkA"
     category: "General"
-    category_id: "DIC_kwDOQJZswM4CxF-Q"
+    category_id: "DIC_kwDOQK8AkM4CxLkA"
     mapping: "pathname"
     strict: "0"
     input_position: "bottom"
