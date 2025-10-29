@@ -28,8 +28,11 @@ url: "https://sandman126.github.io"
 # github:
 #   username: sandman126 # change to your GitHub username
 
-twitter:
-  username: liron126 # change to your Twitter username
+# twitter:
+#   username: liron126 # change to your Twitter username
+
+telegram:
+  username: pipapo126 # change to your Telegram username
 
 social:
   # Change to your full name.
@@ -43,6 +46,7 @@ social:
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
+    - https://t.me/username # change to your Telegram homepage
 
 # Site Verification Settings
 webmaster_verifications:
