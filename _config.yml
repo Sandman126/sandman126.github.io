@@ -25,8 +25,8 @@ description: >- # used by seo meta and the atom feed
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://sandman126.github.io"
 
-# github:
-#   username: sandman126 # change to your GitHub username
+facebook:
+  username: sandman126 # change to your GitHub username
 
 # twitter:
 #   username: liron126 # change to your Twitter username
