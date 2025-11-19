@@ -1,4 +1,4 @@
-# zzzzz.yml filter=git-crypt diff=git-crypt
+zzzzz.yml filter=git-crypt diff=git-crypt
 # Set default behavior to automatically normalize line endings.
 * text=auto
 
