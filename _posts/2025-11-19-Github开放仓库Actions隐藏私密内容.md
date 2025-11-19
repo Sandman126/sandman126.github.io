@@ -95,21 +95,4 @@ image: assets/img/bannel.jpg
 - 所有私密内容通过 GitHub 官方加密通道注入，100% 安全  
 - 完全不需要 git-crypt，也不用在 CI 里折腾 GPG 私钥
 
-### 如果你非常非常执着要用 git-crypt 加密 _config.yml（不推荐）
 
-那你必须在 Actions 里做这些事（麻烦 10 倍）：
-
-```yaml
-- name: Install git-crypt
-  run: sudo apt-get install -y git-crypt
-
-- name: Unlock git-crypt with key
-  run: echo "${{ secrets.GIT_CRYPT_KEY }}" | base64 -d > /tmp/key
-        && git-crypt unlock /tmp/key
-```
-
-然后你还得把对称密钥 base64 后塞进 secrets，稍微漏一点就全炸。
-
-**结论：99% 的情况下，请直接用上面第一种「GitHub Secrets 注入」方案。**
-
-需要我直接给你生成一个完整可用的 `_config.yml` 模板 + Actions 工作流文件吗？告诉我你用的是 Jekyll / Hexo / Hugo / Quarto，我 10 秒给你发。
