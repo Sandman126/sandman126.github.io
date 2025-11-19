@@ -1,4 +1,3 @@
-zzzzz.yml filter=git-crypt diff=git-crypt
 # Set default behavior to automatically normalize line endings.
 * text=auto
 
@@ -15,5 +14,6 @@ zzzzz.yml filter=git-crypt diff=git-crypt
 *.png binary
 *.jpg binary
 *.ico binary
+zzzzz.yml filter=git-crypt diff=git-crypt
 
 # README.md filter=git-crypt diff=git-crypt*.yml filter=git-crypt diff=git-crypt
