@@ -15,5 +15,6 @@
 *.jpg binary
 *.ico binary
 zzzzz.yml filter=git-crypt diff=git-crypt
+_config.yml filter=git-crypt diff=git-crypt
 
 # README.md filter=git-crypt diff=git-crypt*.yml filter=git-crypt diff=git-crypt
