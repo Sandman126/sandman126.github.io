@@ -9,7 +9,9 @@ categories:
 - 技术
 - AI
 source: https://v.douyin.com/OFp_f53qS_0/
+image: /assets/img/img-ai-agent.jpeg
 ---
+
 
 该视频介绍了Matt Pocock开发的一项名为"Handoff"的AI Agent新技能，用于解决AI代理在长对话中因上下文窗口过载而"变笨"的问题。
  

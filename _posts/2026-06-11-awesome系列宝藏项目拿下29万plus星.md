@@ -11,7 +11,9 @@ categories:
 description: awesome系列宝藏项目推荐，累计获得29万+星的GitHub优质项目合集
 source: https://v.douyin.com/YBU4PEoArrI/
 summary: 推荐了一系列 GitHub 上的 awesome 类型宝藏开源项目，总星标数超过 29 万。涵盖前端开发、开源工具等多个领域。
+image: /assets/img/img-opensource-code.jpeg
 ---
+
 
 # awesome系列宝藏项目～拿下29万➕星
 

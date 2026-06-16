@@ -12,7 +12,9 @@ categories:
 description: Obsidian Agent Client 插件通过 ACP 连接 WSL 中的 Hermes Agent
 source: https://github.com/RAIT-09/obsidian-agent-client
 summary: 通过 wsl.exe 桥接，在 Obsidian 中直接与 Hermes 对话
+image: /assets/img/img-cyber-connect.jpeg
 ---
+
 
 # Obsidian Agent Client 连接 Hermes
 

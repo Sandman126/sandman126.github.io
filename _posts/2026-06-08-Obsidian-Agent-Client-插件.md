@@ -14,7 +14,9 @@ description: Agent Client Plugin for Obsidian — 在 Obsidian 中直接使用 A
 source: https://github.com/RAIT-09/obsidian-agent-client
 summary: Agent Client 是一款 Obsidian 插件，基于 Agent Client Protocol (ACP) 协议，将 Claude Code、Codex、Gemini
   CLI 等 AI 智能体直接集成到 Obsidian 中。
+image: /assets/img/img-digital-notes.jpeg
 ---
+
 
 # Obsidian Agent Client 插件
 
